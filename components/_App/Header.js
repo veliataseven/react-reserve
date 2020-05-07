@@ -1,13 +1,17 @@
 import { Menu, Container, Image, Icon } from 'semantic-ui-react';
 import Link from 'next/link';
+import { useRouter } from 'next/router';
 
 function Header() {
   const user = true;
+  const router = useRouter();
+  const isActive = (route) => route === router.pathname;
+
   return (
     <Menu fluid id="menu" inverted>
       <Container text>
         <Link href="/">
-          <Menu.Item>
+          <Menu.Item header active={isActive('/')}>
             <Image
               size="mini"
               src="static/logo.svg"
@@ -17,33 +21,31 @@ function Header() {
           </Menu.Item>
         </Link>
         <Link href="/cart">
-          <Menu.Item>
+          <Menu.Item header active={isActive('/cart')}>
             <Icon name="cart" size="large" />
             Cart
           </Menu.Item>
         </Link>
-
         {user && (
           <>
             <Link href="/create">
-              <Menu.Item>
+              <Menu.Item header active={isActive('/create')}>
                 <Icon name="add square" size="large" />
                 Create
               </Menu.Item>
             </Link>
           </>
         )}
-
         {user ? (
           <>
             <Link href="/account">
-              <Menu.Item>
+              <Menu.Item header active={isActive('/account')}>
                 <Icon name="user" size="large" />
                 Account
               </Menu.Item>
             </Link>
 
-            <Menu.Item>
+            <Menu.Item header>
               <Icon name="sign out" size="large" />
               Logout
             </Menu.Item>
@@ -51,13 +53,13 @@ function Header() {
         ) : (
           <>
             <Link href="/login">
-              <Menu.Item>
+              <Menu.Item header active={isActive('/login')}>
                 <Icon name="sign in" size="large" />
                 Login
               </Menu.Item>
             </Link>
             <Link href="/signup">
-              <Menu.Item>
+              <Menu.Item header active={isActive('/signup')}>
                 <Icon name="signup" size="large" />
                 Signup
               </Menu.Item>
