@@ -2,7 +2,7 @@ import React from 'react';
 import axios from 'axios';
 
 function Home(props) {
-  // console.log(props.products);
+  console.log(props.products);
   //   React.useEffect(() => {
   //     getProducts();
   //   }, []);
