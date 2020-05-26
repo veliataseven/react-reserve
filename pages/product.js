@@ -1,16 +1,13 @@
 import axios from 'axios';
-// import ProductSummary from '../components/Product/ProductSummary';
-// import ProductAttributes from '../components/Product/ProductAttributes';
+import ProductSummary from '../components/Product/ProductSummary';
+import ProductAttributes from '../components/Product/ProductAttributes';
 // import baseUrl from '../utils/baseUrl';
 
 function Product({ product }) {
-  console.log('{product}', { product });
   return (
     <>
-      {' '}
-      product
-      {/* <ProductSummary {...product} /> */}
-      {/* <ProductAttributes user={user} {...product} /> */}
+      <ProductSummary {...product} />
+      <ProductAttributes {...product} />
     </>
   );
 }
