@@ -55,22 +55,22 @@ function CreateProduct() {
   }
 
   async function handleSubmit(event) {
-    // try {
-    event.preventDefault();
-    setLoading(true);
-    setError('');
-    const mediaUrl = await handleImageUpload();
-    const url = `${baseUrl}/api/product`;
-    const { name, price, description } = product;
-    const payload = { name, price, description, mediaUrl };
-    await axios.post(url, payload);
-    setProduct(INITIAL_PRODUCT);
-    setSuccess(true);
-    // } catch (error) {
-    catchErrors(error, setError);
-    // } finally {
-    setLoading(false);
-    // }
+    try {
+      event.preventDefault();
+      setLoading(true);
+      setError('');
+      const mediaUrl = await handleImageUpload();
+      const url = `${baseUrl}/api/product`;
+      const { name, price, description } = product;
+      const payload = { name, price, description, mediaUrl };
+      await axios.post(url, payload);
+      setProduct(INITIAL_PRODUCT);
+      setSuccess(true);
+    } catch (error) {
+      catchErrors(error, setError);
+    } finally {
+      setLoading(false);
+    }
   }
 
   return (
