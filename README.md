@@ -1,4 +1,4 @@
-## Full-Stack Web Application (E-Commerce)
+## Full-Stack Web Application ([e-pickup](https://e-pickup.now.sh/))
 
 Set of technologies that used
 
@@ -6,7 +6,3 @@ Set of technologies that used
 - **E**xpress.js
 - **R**eact.js
 - **N**ode.js
-
----
-
-[a relative link](https://e-pickup.now.sh/)
