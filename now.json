@@ -1,7 +1,7 @@
 {
   "name": "e-pickup",
   "alias": "e-pickup.now.sh",
-  "version": 1,
+  "version": 2,
   "env": {
     "MONGO_SRV": "mongodb+srv://react:react123@reactreserve-giier.mongodb.net/test?retryWrites=true&w=majority",
     "JWT_SECRET": "reactreserve",
