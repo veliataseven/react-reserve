@@ -6,6 +6,6 @@ module.exports = {
     JWT_SECRET: 'reactreserve',
     CLOUDINARY_URL:
       'https://api.cloudinary.com/v1_1/reactreservecode/image/upload',
-    STRIPE_SECRET_KEY: '<insert-stripe-secret-key>',
+    STRIPE_SECRET_KEY: 'sk_test_nWbGbO3jNJHLRR3D3wZQiqBx00iFFoHExR',
   },
 };
